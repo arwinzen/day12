@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
 body {
     min-height: 100vh;
     display: grid;
@@ -5,9 +8,29 @@ body {
     background: #141E30;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif;
 }
 
-.to-do {
+input#task {
+    display: block;
+    padding: 1rem;
+    border: 1px solid rgb(179, 170, 170);
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+
+button {
+    color: ivory;
+    background: linear-gradient(to right, #243B55, #141E30);
+    padding: 1rem;
+    border: 0;
+    border: 2px solid transparent;
+    border-radius: 0 0.3rem 0.3rem 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.todo {
     display: grid;
     grid-template-columns: 1fr auto;
 }
@@ -32,5 +55,32 @@ body {
     grid-template-columns: auto 1fr auto;
     grid-gap: 1rem;
     align-items: center;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid rgb(179, 170, 170);
+}
+
+.todo-item input {
+    margin-right: 1rem;
+}
+
+.todo-item input[type="checkbox"]:checked + span {
+    opacity: 0.5;
+}
+
+.todo-item button {
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.todo-item button:hover {
+    transform:scale(1.4);
+}
+
+.completed-header {
+    background: linear-gradient(to right, #243B55, #141E30);
+    padding: 1rem;
+    color: ivory;
+    visibility: hidden;
 }
