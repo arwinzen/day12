@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.to-do {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.todo-list {
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 500px;
+    margin: 4rem 0;
+}
+
+.todo-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
