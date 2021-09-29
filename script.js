@@ -66,6 +66,9 @@ function deleteTask(target){
         // target.parentNode refers to the li item which contains the delete btn
         target.parentNode.remove();
     }
+    if(!completedList.hasChildNodes()){
+        completedHeader.style.visibility = "hidden";
+    }
     return;
 }
 

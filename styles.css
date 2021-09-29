@@ -30,6 +30,7 @@ button {
     font-size: 1.5rem;
 }
 
+/* two columns for the todo form */ 
 .todo {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -49,6 +50,7 @@ button {
     padding: 0;
 }
 
+/* 3 columns for the todo list items */
 .todo-item {
     padding: 1rem 0;
     display: grid;
@@ -62,6 +64,7 @@ button {
     margin-right: 1rem;
 }
 
+/* if checkbox is checked, target adjacent span */
 .todo-item input[type="checkbox"]:checked + span {
     opacity: 0.5;
 }
